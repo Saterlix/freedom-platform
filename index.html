@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FreeDom - Premium Freelance Platform for Business</title>
   <meta name="description" content="FreeDom is a top-tier freelance and B2B platform with 5-10% fees, AI tools, secure escrow, and a ready-made solutions marketplace.">
-  <meta name="theme-color" content="#061511">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,10 +19,10 @@
     <nav class="nav">
       <a href="#how" data-i18n="nav_how">How it works</a>
       <a href="#features" data-i18n="nav_features">Platform Features</a>
-      <a href="#security" data-i18n="nav_security">Security & Escrow</a>
       <a href="#business" data-i18n="nav_business">For Business</a>
     </nav>
     <div class="site-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">🌙</button>
       <div class="lang-switch" aria-label="Language">
         <button type="button" data-lang="en">EN</button>
         <button type="button" data-lang="ru">RU</button>
@@ -35,170 +34,129 @@
 
   <main>
     <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow" data-i18n="hero_badge">B2B Freelance & Ready Solutions</div>
-        <h1 data-i18n="hero_title">Empower Your Business with Top-Tier IT Solutions</h1>
+      <div class="hero-copy animate-fade-in">
+        <div class="eyebrow" data-i18n="hero_badge">Enterprise Grade Freelance</div>
+        <h1 data-i18n="hero_title">Build the Future of Your Business. Fast.</h1>
         <p data-i18n="hero_text">
-          FreeDom connects businesses with verified IT professionals. Enjoy transparent 5-10% fees, AI-accelerated delivery, safe escrow deals, and a marketplace of ready-to-deploy business applications. Build faster, securely, and cost-effectively.
+          Connect with top 1% IT professionals. Enjoy zero-risk escrow payments, AI-accelerated delivery, and a marketplace of production-ready SaaS modules.
         </p>
         <div class="hero-actions">
           <a class="primary-link" href="app.html" data-i18n="start_work">Start Building Now</a>
           <a class="secondary-link" href="#how" data-i18n="see_flow">Explore the Process</a>
         </div>
-        <div class="trust-row" aria-label="Key platform metrics">
-          <div><strong>Secure</strong><span data-i18n="stat_escrow">Escrow payments</span></div>
-          <div><strong>AI-Driven</strong><span data-i18n="stat_ai">Smart matching & tools</span></div>
-          <div><strong data-i18n="stat_verified">Verified</strong><span data-i18n="stat_pros">Top professionals only</span></div>
+        <div class="trust-row">
+          <div><strong>100%</strong><span data-i18n="stat_escrow">Safe Escrow</span></div>
+          <div><strong>5-10%</strong><span data-i18n="stat_ai">Fair Fees</span></div>
+          <div><strong>24/7</strong><span data-i18n="stat_verified">Premium Support</span></div>
         </div>
       </div>
 
-      <div class="product-visual" aria-label="FreeDom interface preview">
-        <div class="phone-shell">
-          <div class="phone-top">
-            <span>FreeDom</span>
-            <strong>$12,450 / 148M UZS</strong>
+      <div class="dashboard-mockup animate-fade-in delay-2">
+        <div class="floating-badge">Verified Pros</div>
+        <div class="mockup-header">
+          <div class="mac-btn r"></div>
+          <div class="mac-btn y"></div>
+          <div class="mac-btn g"></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-sidebar">
+            <div class="mockup-icon active"></div>
+            <div class="mockup-icon"></div>
+            <div class="mockup-icon"></div>
           </div>
-          <div class="role-switch">
-            <span class="active" data-i18n="client">Client</span>
-            <span data-i18n="freelancer">Freelancer</span>
-          </div>
-          <div class="mini-tabs">
-            <span class="active" data-i18n="active_projects">Active Projects</span>
-            <span>Marketplace</span>
-            <span data-i18n="team">Team</span>
-          </div>
-          <article class="mini-card live-card">
-            <div>
-              <h3 data-i18n="preview_order_one">Enterprise CRM Dashboard</h3>
-              <p data-i18n="preview_order_one_text">Full-stack analytics, lead routing, and role-based access.</p>
+          <div class="mockup-content">
+            <div class="mockup-card">
+              <div class="mockup-avatar"></div>
+              <div class="mockup-lines">
+                <div class="mockup-line"></div>
+                <div class="mockup-line short"></div>
+              </div>
             </div>
-            <strong>$2,500</strong>
-          </article>
-          <article class="mini-card">
-            <div>
-              <h3 data-i18n="preview_order_two">FinTech Payment Gateway</h3>
-              <p data-i18n="preview_order_two_text">API integration with local banks, secure transaction logs.</p>
+            <div class="mockup-card" style="transition-delay: 0.1s">
+              <div class="mockup-avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6)"></div>
+              <div class="mockup-lines">
+                <div class="mockup-line"></div>
+                <div class="mockup-line short"></div>
+              </div>
             </div>
-            <strong>$1,800</strong>
-          </article>
-          <div class="bottom-nav-preview">
-            <span data-i18n="projects">Projects</span>
-            <span data-i18n="messages">Messages</span>
-            <span data-i18n="settings">Settings</span>
+            <div class="mockup-card" style="transition-delay: 0.2s">
+              <div class="mockup-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444)"></div>
+              <div class="mockup-lines">
+                <div class="mockup-line"></div>
+                <div class="mockup-line short"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="floating-note note-one" data-i18n="note_response">Milestone Approved</div>
-        <div class="floating-note note-two">Secure Payment Released</div>
       </div>
     </section>
 
-    <section class="partners-strip">
-      <span data-i18n="source_nova">Trusted by Nova</span>
-      <span data-i18n="source_bot">Enterprise Grade Security</span>
-      <span data-i18n="source_site">24/7 Premium Support</span>
-      <span data-i18n="source_future">Scalable Infrastructure</span>
-    </section>
-
-    <section class="split-section" id="how">
-      <div class="section-heading">
-        <span class="eyebrow" data-i18n="one_product">Seamless Collaboration</span>
-        <h2 data-i18n="how_title">Designed for businesses to scale. Built for professionals to thrive.</h2>
+    <section class="section" id="how">
+      <div class="section-title animate-fade-in">
+        <span data-i18n="one_product">Workflow</span>
+        <h2 data-i18n="how_title">Designed for Scale. Built for Speed.</h2>
       </div>
-      <div class="split-grid">
-        <article class="role-card client">
-          <span class="card-kicker" data-i18n="for_client">For Business Clients</span>
-          <h3 data-i18n="client_card_title">Post your project, evaluate demos, pay for results</h3>
-          <p data-i18n="client_card_text">Eliminate risk. Review working prototypes and real code before finalizing payment. Communicate directly via secure, encrypted channels.</p>
-          <ul>
-            <li data-i18n="client_li_1">100% Funds held in secure escrow.</li>
-            <li data-i18n="client_li_2">NDA & IP Protection by default.</li>
-            <li data-i18n="client_li_3">Pay only upon successful milestone delivery.</li>
-          </ul>
-        </article>
-        <article class="role-card freelancer">
-          <span class="card-kicker" data-i18n="for_freelancer">For IT Professionals</span>
-          <h3 data-i18n="freelancer_card_title">Focus on code, not on chasing clients</h3>
-          <p data-i18n="freelancer_card_text">Leverage your existing codebase. Adapt ready-made solutions, secure deals with guaranteed payouts, and monetize unused assets in our marketplace.</p>
-          <ul>
-            <li data-i18n="freelancer_li_1">Integrated AI coding assistants & tools.</li>
-            <li data-i18n="freelancer_li_2">Keep up to 95% of your earnings.</li>
-            <li data-i18n="freelancer_li_3">Turn past projects into passive income.</li>
-          </ul>
-        </article>
+      <div class="bento-grid">
+        <div class="bento-box animate-fade-in delay-1">
+          <div class="bento-icon">🔒</div>
+          <h3 data-i18n="client_card_title">Secure Escrow Payments</h3>
+          <p data-i18n="client_card_text">Funds are locked securely until you approve the final delivery. Zero risk, 100% guarantee.</p>
+        </div>
+        <div class="bento-box animate-fade-in delay-2">
+          <div class="bento-icon">⚡</div>
+          <h3 data-i18n="freelancer_card_title">AI-Powered Delivery</h3>
+          <p data-i18n="freelancer_card_text">Our built-in AI tools help generate specs, structure code, and accelerate time-to-market by 10x.</p>
+        </div>
+        <div class="bento-box animate-fade-in delay-3">
+          <div class="bento-icon">🏢</div>
+          <h3 data-i18n="tools_market">B2B Solutions Market</h3>
+          <p data-i18n="tools_text">Don't reinvent the wheel. Buy audited, production-ready SaaS modules and deploy instantly.</p>
+        </div>
       </div>
     </section>
 
-    <section class="flow-section" id="security">
-      <div class="section-heading">
-        <span class="eyebrow" data-i18n="deal_flow">Secure Escrow Process</span>
-        <h2 data-i18n="flow_title">Zero risk. Guaranteed results.</h2>
+    <section class="section" id="features">
+      <div class="section-title animate-fade-in">
+        <span data-i18n="tools_badge">Excellence</span>
+        <h2 data-i18n="rules_title">Professionalism is our metric.</h2>
       </div>
-      <div class="flow-grid">
-        <article><span>01</span><h3 data-i18n="flow_1_title">Define Scope & Budget</h3><p data-i18n="flow_1_text">Post a detailed RFP. Funds are safely deposited into an escrow account.</p></article>
-        <article><span>02</span><h3 data-i18n="flow_2_title">Evaluate Solutions</h3><p data-i18n="flow_2_text">Review proposals, conduct secure chats, and test live prototypes.</p></article>
-        <article><span>03</span><h3 data-i18n="flow_3_title">Approve Deliverables</h3><p data-i18n="flow_3_text">Accept the final working product. IP rights are seamlessly transferred.</p></article>
-        <article><span>04</span><h3 data-i18n="flow_4_title">Automated Payouts</h3><p data-i18n="flow_4_text">Escrow releases funds instantly upon your approval. Zero friction.</p></article>
-      </div>
-    </section>
-
-    <section class="marketplace-section" id="features">
-      <div class="market-copy">
-        <span class="eyebrow" data-i18n="tools_badge">AI + Marketplace</span>
-        <h2 data-i18n="tools_title">Next-Gen Delivery Tools</h2>
-        <p data-i18n="tools_text">FreeDom integrates powerful AI assistants for instant architecture planning, code generation, and a B2B marketplace for purchasing production-ready enterprise modules.</p>
-        <a class="secondary-link dark" href="app.html" data-i18n="open_tools">Explore Features</a>
-      </div>
-      <div class="market-preview">
-        <article><span>AI Architecture</span><h3 data-i18n="tool_ai">Automated tech specs and risk analysis</h3><strong data-i18n="faster">10x faster</strong><small data-i18n="for_each_order">project kickoff</small></article>
-        <article><span>App Generator</span><h3 data-i18n="tool_generator">Instant scaffolding for web & bots</h3><strong data-i18n="one_click">1-click</strong><small data-i18n="starter_proto">deployments</small></article>
-        <article><span>B2B Market</span><h3 data-i18n="tool_market">Purchase audited, ready-to-use SaaS modules</h3><strong data-i18n="passive_income">Cost-efficient</strong><small data-i18n="for_freelancers_small">scaling</small></article>
-      </div>
-    </section>
-
-    <section class="justice-section" id="business">
-      <div>
-        <span class="eyebrow" data-i18n="rules_badge">Enterprise Standards</span>
-        <h2 data-i18n="rules_title">Professionalism is our core metric</h2>
-        <p data-i18n="rules_text">We enforce strict quality and communication standards. Verified identities, mandatory NDAs, and a zero-tolerance policy for unprofessional behavior ensure a corporate-grade environment.</p>
-      </div>
-      <div class="justice-grid">
-        <article><strong data-i18n="zero_tolerance">Strict KYC/KYB</strong><span data-i18n="zero_text">Verified businesses and contractors</span></article>
-        <article><strong data-i18n="fast_report">Legal Protection</strong><span data-i18n="report_text">Built-in NDA and IP transfer agreements</span></article>
-        <article><strong data-i18n="ban">Quality Assurance</strong><span data-i18n="ban_text">Dispute resolution and code auditing available</span></article>
-      </div>
-    </section>
-
-    <section class="launch-section" id="launch">
-      <div>
-        <span class="eyebrow" data-i18n="next_badge">Ready to Scale?</span>
-        <h2 data-i18n="launch_title">Join the future of digital product development.</h2>
-        <p data-i18n="launch_text">Access global tech talent, utilize cutting-edge AI tools, and manage your projects securely from a single, unified dashboard.</p>
-      </div>
-      <div class="launch-actions">
-        <a class="primary-link" href="app.html" data-i18n="go_platform">Create Free Account</a>
-        <button class="secondary-link" id="copyLinkBtn" type="button" data-i18n="copy_link">Share Platform</button>
+      <div class="bento-grid">
+        <div class="bento-box animate-fade-in delay-1">
+          <h3 data-i18n="zero_tolerance">Strict KYC & Verification</h3>
+          <p data-i18n="zero_text">Every business and freelancer undergoes strict identity and skill verification.</p>
+        </div>
+        <div class="bento-box animate-fade-in delay-2">
+          <h3 data-i18n="fast_report">Legal Protection</h3>
+          <p data-i18n="report_text">Built-in NDAs and automated IP transfer agreements protect your proprietary code.</p>
+        </div>
+        <div class="bento-box animate-fade-in delay-3">
+          <h3 data-i18n="ban">Quality Assurance</h3>
+          <p data-i18n="ban_text">Zero tolerance for toxic behavior. Independent code audits available on demand.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" style="padding: 40px; background: #061511; color: rgba(255,255,255,0.7); display: flex; justify-content: space-between; align-items: flex-start; border-top: 1px solid rgba(255,255,255,0.1);">
-    <div>
-      <span style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 10px; display: block;">FreeDom</span>
-      <span data-i18n="footer_text">Premium IT Solutions & Freelance Platform</span>
-      <p style="font-size: 0.85rem; margin-top: 20px;">© 2024 FreeDom. All rights reserved.</p>
-    </div>
-    <div style="display: flex; gap: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <strong style="color: #fff;">Platform</strong>
-        <a href="#how" style="color: inherit; text-decoration: none; font-size: 0.9rem;">How it works</a>
-        <a href="#features" style="color: inherit; text-decoration: none; font-size: 0.9rem;">Features</a>
-        <a href="#security" style="color: inherit; text-decoration: none; font-size: 0.9rem;">Security</a>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FreeDom</h2>
+        <p data-i18n="footer_text">Premium IT Solutions Platform</p>
+        <p style="color: #6b7280; font-size: 0.875rem; margin-top: 24px;">© 2024 FreeDom Inc.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <strong style="color: #fff;">Legal</strong>
-        <a href="#" style="color: inherit; text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
-        <a href="#" style="color: inherit; text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
-        <a href="#" style="color: inherit; text-decoration: none; font-size: 0.9rem;">Data Processing Agreement</a>
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Platform</strong>
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="app.html">Launch App</a>
+        </div>
+        <div class="footer-col">
+          <strong>Legal</strong>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Data Processing</a>
+        </div>
       </div>
     </div>
   </footer>
